@@ -42,5 +42,12 @@ public class JavaClassTest {
 
         assertThat(person.getDNI().length(), is(9));
     }
+    @Test
+    @DisplayName("Year of birth is a number")
+    public void test_person_year_of_birth_is_a_number() {
+
+        PersonA person = new PersonA("gato", "34534554E", 2002);
+        assertThat(person.getYearOfBirth(), is(instanceOf(Integer.class)));
+    }
 
 }
