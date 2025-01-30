@@ -49,5 +49,12 @@ public class JavaClassTest {
         PersonA person = new PersonA("gato", "34534554E", 2002);
         assertThat(person.getYearOfBirth(), is(instanceOf(Integer.class)));
     }
+    @Test
+    @DisplayName("Surname is a String")
+    public void test_person_surname_is_a_string() {
+
+        PersonA person = new PersonA("gato", "34534534E", 2002, "rodriguez");
+        assertThat(person.getSurname(), is(instanceOf(String.class)));
+    }
 
 }
