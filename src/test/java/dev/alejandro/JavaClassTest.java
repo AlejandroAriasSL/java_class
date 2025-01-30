@@ -25,6 +25,14 @@ public class JavaClassTest {
         PersonA person = new PersonA("alejandro");
 
         assertThat(person.getName(), is(instanceOf(String.class)));
-    } 
+    }
+    @Test
+    @DisplayName("Class PersonA DNI is a string")
+    public void test_person_dni_is_string() {
+
+        PersonA person = new PersonA("33333333D");
+
+        assertThat(person.getDNI(), is(instanceOf(String.class)));
+    }
 
 }
