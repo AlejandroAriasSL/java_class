@@ -14,7 +14,7 @@ public class JavaClassTest {
     @DisplayName("Class PersonA is a class")
     public void test_person_is_a_class() {
 
-        PersonA person = new PersonA();
+        PersonA person = new PersonA("gato");
 
         assertThat(person, instanceOf(PersonA.class));
     }
@@ -22,9 +22,9 @@ public class JavaClassTest {
     @DisplayName("Class PersonA name is a string")
     public void test_person_name_is_string() {
 
-        PersonA person = new PersonA();
+        PersonA person = new PersonA("alejandro");
 
-        assertThat(person.getName(), is(String.class));
+        assertThat(person.getName(), is(instanceOf(String.class)));
     } 
 
 }
