@@ -34,5 +34,13 @@ public class JavaClassTest {
 
         assertThat(person.getDNI(), is(instanceOf(String.class)));
     }
+    @Test
+    @DisplayName("DNI is 9 characters long")
+    public void test_person_dni_is_9_characters_long() {
+
+        PersonA person = new PersonA("Alejandro", "35435243B");
+
+        assertThat(person.getDNI().length(), is(9));
+    }
 
 }
