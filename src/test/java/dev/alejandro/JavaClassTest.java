@@ -14,7 +14,7 @@ public class JavaClassTest {
     @DisplayName("Class PersonA is a class")
     public void test_person_is_a_class() {
 
-        PersonA person = new PersonA("gato");
+        PersonA person = new PersonA("gato", "33333333D");
 
         assertThat(person, instanceOf(PersonA.class));
     }
@@ -22,7 +22,7 @@ public class JavaClassTest {
     @DisplayName("Class PersonA name is a string")
     public void test_person_name_is_string() {
 
-        PersonA person = new PersonA("alejandro");
+        PersonA person = new PersonA("alejandro", "33333333D");
 
         assertThat(person.getName(), is(instanceOf(String.class)));
     }
@@ -30,7 +30,7 @@ public class JavaClassTest {
     @DisplayName("Class PersonA DNI is a string")
     public void test_person_dni_is_string() {
 
-        PersonA person = new PersonA("33333333D");
+        PersonA person = new PersonA("gato","33333333D");
 
         assertThat(person.getDNI(), is(instanceOf(String.class)));
     }
